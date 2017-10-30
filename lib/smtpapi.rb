@@ -144,7 +144,7 @@ module Smtpapi
       str.unpack('U*').map do |i|
         if i > 65_535
           "\\u#{format('%04x', ((i - 0x10000) / 0x400 + 0xD800))}"\
-          "\\u#{format('%04x', ((i - 0x10000) % 0x400 + 0xDC00))}" if i > 65_535
+          "\\u#{format('%04x', ((i - 0x10000) % 0x400 + 0xDC00))}"
         elsif i > 127
           "\\u#{format('%04x', i)}"
         else
