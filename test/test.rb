@@ -1,4 +1,5 @@
 # -*- encoding: utf-8 -*-
+require 'helper'
 require 'test/unit'
 require './lib/smtpapi'
 
